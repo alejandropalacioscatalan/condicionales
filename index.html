@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Condicionales</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="grid-container">
+    <header class="header">
+      Javascript Condicionales <br />
+      Desafío Latam
+    </header>
+    <section class="AlternarBorde">
+      <h4>ALTERNAR BORDE</h4>
+      <div class="borde-container">
+        <img
+          id="imagen"
+          src="./imagenes/imagen1.jpg"
+          onclick="cambia_borde()"
+        />
+      </div>
+    </section>
+
+    <section class="PedirStickers">
+      <h4>PEDIR STICKER</h4>
+      <div class="sticker-container">
+        <img
+          class="sticker"
+          id="sticker_1"
+          src="./imagenes/sticker_github.jpg"
+        />
+        <img
+          class="sticker"
+          id="sticker_2"
+          src="./imagenes/sticker_slack.jpg"
+        />
+        <img class="sticker" id="sticker_3" src="./imagenes/sticker_git.jpg" />
+      </div>
+      <div class="input_sticker">
+        <input
+          id="input_sticker1"
+          type="number"
+          onkeypress="return (event.charCode !=8 && event.charCode ==0 ||
+        (event.charCode >= 48 && event.charCode <= 57))"
+        />
+        <input
+          id="input_sticker2"
+          type="number"
+          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+        />
+        <input
+          id="input_sticker3"
+          type="number"
+          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+        />
+      </div>
+      <div class="parrafo-boton">
+        <button class="boton-verificar" onclick="verificar_sticker()">
+          Verificar
+        </button>
+      </div>
+    </section>
+
+    <section class="VerificaPassword">
+      <h4>VERIFICA PASSWORD</h4>
+      <div class="contendor-pw">
+        <h4 class="txtIngresaPw">INGRESA PASSWORD</h4>
+        <div class="contenedor-select">
+          <select class="select" id="digito1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <select class="select" id="digito2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <select class="select" id="digito3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div>
+        <div class="contenedor-boton">
+          <button class="boton-ingresar-pw" onclick="verifica_password()">
+            Ingresar
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>Alejandro Palacios Catalán</p>
+      <p>todos derechos reservados</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

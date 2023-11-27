@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-image: linear-gradient(green, rgb(108, 172, 106));
+  color: white;
+}
+
+.AlternarBorde {
+  grid-area: AlternarBorde;
+  background-color: #f5f5f5;
+}
+
+.PedirStickers {
+  grid-area: PedirStickers;
+  background-color: #f5f5f5;
+}
+
+.VerificaPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  grid-area: VerificaPassword;
+  background-color: #f5f5f5;
+}
+
+.contendor-pw {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  border: 2px black solid;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.txtIngresaPw {
+  color: tomato;
+}
+
+.boton-ingresar-pw {
+  width: 80px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-image: linear-gradient(blue, rgb(15, 112, 136));
+  /* background-color: #8c96a0; */
+  color: white;
+}
+
+.select {
+  width: 40px;
+  font-size: 17px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header  header header" 70px
+    "AlternarBorde  PedirStickers VerificaPassword" auto
+    "footer  footer footer" 70px /
+    33% 33% 33%;
+}
+
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template:
+      "header " 70px
+      "AlternarBorde"
+      "PedirStickers "
+      "VerificaPassword" auto
+      "footer" 70px /
+      auto auto auto;
+  }
+}
+
+#imagen {
+  width: 60%;
+  margin-top: 30px;
+  border: 3px rgb(255, 255, 255) solid;
+}
+
+.sticker {
+  width: 20%;
+  object-fit: cover;
+}
+
+#sticker_3 {
+  width: 20%;
+  object-fit: cover;
+}
+
+.sticker-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.input_sticker {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  height: 25px;
+}
+
+#parrafo {
+  margin-top: 10px;
+}
+.boton-verificar {
+  width: 80px;
+  font-size: 18px;
+  margin-top: 10px;
+}
